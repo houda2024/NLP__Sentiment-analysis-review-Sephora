@@ -131,7 +131,7 @@
     line-height: 1.6;
     font-weight: 400;
     font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: rgb(50, 50, 50); }
+    color: rgb(45, 44, 44); }
   
   
   /* Typography
@@ -154,7 +154,7 @@
   /* Blockquotes
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   blockquote {
-    border-left: 4px lightgrey solid;
+    border-left: 4px rgb(192, 189, 189) solid;
     padding-left: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -182,7 +182,7 @@
     display: inline-block;
     height: 38px;
     padding: 0 30px;
-    color: #555;
+    color: #827f7f;
     text-align: center;
     font-size: 11px;
     font-weight: 600;
@@ -193,7 +193,7 @@
     white-space: nowrap;
     background-color: transparent;
     border-radius: 4px;
-    border: 1px solid #bbb;
+    border: 1px solid #cdc9c9;
     cursor: pointer;
     box-sizing: border-box; }
   .button:hover,
@@ -214,7 +214,7 @@
   input[type="submit"].button-primary,
   input[type="reset"].button-primary,
   input[type="button"].button-primary {
-    color: #FFF;
+    color: #c2bebe;
     background-color: #33C3F0;
     border-color: #33C3F0; }
   .button.button-primary:hover,
@@ -245,8 +245,8 @@
   select {
     height: 38px;
     padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-    background-color: #fff;
-    border: 1px solid #D1D1D1;
+    background-color: #f8f5f5;
+    border: 1px solid #ede9e9;
     border-radius: 4px;
     box-shadow: none;
     box-sizing: border-box; 
@@ -323,7 +323,7 @@
   td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #E1E1E1; }
+    border-bottom: 1px solid #e6e3e3; }
   th:first-child,
   td:first-child {
     padding-left: 0; }

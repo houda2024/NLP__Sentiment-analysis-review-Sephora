@@ -13,10 +13,7 @@ def download_url(url, save_path):
         with open(save_path, 'wb') as out_file:
             out_file.write(dl_file.read())
 
-saved_model = ['https://github.com/sankirnajoshi/sentiment-app/raw/master/model/model.h5',
-              'https://raw.githubusercontent.com/sankirnajoshi/sentiment-app/master/model/model.json',
-              'https://github.com/sankirnajoshi/sentiment-app/raw/master/model/tokenizer.pickle'
-              ]
+
 
 if not path.exists('./model'):
     os.makedirs('./model') 

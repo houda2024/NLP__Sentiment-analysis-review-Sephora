@@ -1,9 +1,11 @@
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc, html
+
 import pandas as pd
 from dash.dependencies import Input, Output, State
 import model
+
+
 
 
 #external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -24,6 +26,7 @@ app.layout = html.Div(
         html.Div(
             [html.Img(src=app.get_asset_url("dash-logo.png"))], className="app__banner"
     ),
+
     html.Div(
         [
         html.Div(
@@ -31,27 +34,27 @@ app.layout = html.Div(
                 html.Div(
                     [
                         html.H1(
-                            "Sentiment classifier",
+                            "Advanced Sentiment Analysis for Sephora Website Product Reviews",
                             className="uppercase title",
                         ),
                         html.Span(
-                            "This is a multi-class text-classification model that can classify your into the following tags:", style={'padding': '10px'}
+                            "This advanced  text classification model accurately categorizes your input into the following tags:", style={'padding': '20px'}
                         ),
                         html.Br(),                        
                         html.Span(
-                            "Tag confidence is the confidence for each tag", style={'padding': '10px'}
+                            "Tag confidence simply shows how sure the model is about each tag", style={'padding': '10px'}
                         ),
                         html.Br(),                        
                         html.Span(
-                            "Sentiment confidence is the confidence of the sentiment: Positive/Neutral/Negative", style={'padding': '10px'}
+                            "Sentiment confidence reflects the model's certainty about the sentiment: Positive/Neutral/Negative", style={'padding': '10px'}
                         ),  
                         html.Br(),
                         html.Br(),                        
-                        html.Span("Very Negative", style={'color': '#e01b1b', 'border-radius': '5px', 'border-width': '2px', 'border-style': 'solid', 'border-color': '#b8c2d4', 'padding': '2px','margin-right': '5px'} ),
-                        html.Span("Negative",      style={'color': '#db3a2c', 'border-radius': '5px', 'border-width': '2px', 'border-style': 'solid', 'border-color': '#b8c2d4', 'padding': '2px', 'margin-right': '5px'} ),
-                        html.Span("Neutral",       style={'color': '#ebcd0e', 'border-radius': '5px', 'border-width': '2px', 'border-style': 'solid', 'border-color': '#b8c2d4', 'padding': '2px', 'margin-right': '5px'} ),
-                        html.Span("Positive",      style={'color': '#83db1f', 'border-radius': '5px', 'border-width': '2px', 'border-style': 'solid', 'border-color': '#b8c2d4', 'padding': '2px', 'margin-right': '5px'} ),
-                        html.Span("Very Positive", style={'color': '#4ce80e', 'border-radius': '5px', 'border-width': '2px', 'border-style': 'solid', 'border-color': '#b8c2d4', 'padding': '2px'} ),                                                                               
+                        html.Span("Very Negative", style={'color': '#9c1313', 'border-radius': '5px', 'border-width': '2px', 'border-style': 'solid', 'border-color': '#b8c2d4', 'padding': '2px','margin-right': '5px'} ),
+                        html.Span("Negative",      style={'color': '#dc1b1b', 'border-radius': '5px', 'border-width': '2px', 'border-style': 'solid', 'border-color': '#b8c2d4', 'padding': '2px', 'margin-right': '5px'} ),
+                        html.Span("Neutral",       style={'color': '#837738', 'border-radius': '5px', 'border-width': '2px', 'border-style': 'solid', 'border-color': '#b8c2d4', 'padding': '2px', 'margin-right': '5px'} ),
+                        html.Span("Positive",      style={'color': '#94b552', 'border-radius': '5px', 'border-width': '2px', 'border-style': 'solid', 'border-color': '#b8c2d4', 'padding': '2px', 'margin-right': '5px'} ),
+                        html.Span("Very Positive", style={'color': '#458338', 'border-radius': '5px', 'border-width': '2px', 'border-style': 'solid', 'border-color': '#b8c2d4', 'padding': '2px'} ),                                                                               
                     ], style = {'background':'#ffffff'}
                 ),
             ],
@@ -63,7 +66,7 @@ app.layout = html.Div(
                 [
                     html.Div(
                         [
-                            html.H3('Enter your text here:'),
+                            html.H3('Share your thoughts and reviews so we can analyze them:'),
                             dcc.Textarea(
                                 id="input-id",
                                 value ="Wow, what a fabulous story!",
